@@ -182,6 +182,8 @@ case "$num" in
    rm Output/smd3ma4.cu8
    
    rm Output/smd3ma4.ook
+
+	 sed 's/RAW_Data: /RAW_Data: 1 -999 /g' Output/smd3ma4.sub > Output/smd3ma4-mod.sub
    
    exit 1
    ;;
