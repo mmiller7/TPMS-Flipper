@@ -18,7 +18,6 @@ time      : @0.184300s
 model     : Ford         type      : TPMS          id        : 45bb320f
 code      : 6ad446       mic       : CHECKSUM
 """
-home_directory = os.path.expanduser( '~' )
 
 MODEL='Ford'
 
@@ -119,7 +118,7 @@ def main():
 
   print(( 'manchester = %s' % str(manchester).replace('\xff','1').replace('\x00','_') ))
 
-  f = open(os.path.join( home_directory, 'TPMS', 'Output', output_file),'wb')
+  f = open(os.path.join( 'Output', output_file),'wb')
   f.write(manchester)
 
   print(('signal written to %s' % output_file))

@@ -3,8 +3,6 @@ import os
 from lib.crc import crc8
 from bitstring import BitArray
 
-#home_directory = os.path.expanduser( '~' )
-
 MODEL='Toyota'
 
 PRESSURE=int((33.5 + 7)*4)

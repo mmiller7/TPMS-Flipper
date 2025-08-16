@@ -19,7 +19,6 @@ time      : @0.214588s
 model     : Renault      type      : TPMS          id        : 87f293
 flags     : 34           pressure_kPa: 202.5 kPa   temperature_C: 25 C       mic       : CRC
 """
-home_directory = os.path.expanduser( '~' )
 
 MODEL='Renault'
 
@@ -130,7 +129,7 @@ def main():
 
   print(( 'manchester = %s' % str (manchester).replace('\xff','1').replace('\x00','_') ))
 
-  f = open(os.path.join( home_directory, 'TPMS', 'Output', output_file),'wb')
+  f = open(os.path.join( 'Output', output_file),'wb')
   f.write(manchester)
 
   print(('signal written to %s' % output_file))

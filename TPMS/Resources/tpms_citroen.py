@@ -18,7 +18,6 @@ time      : @0.198304s
 model     : Citroen      type      : TPMS          state     : d2            id        : 8add48d4
 flags     : 0            repeat    : 1             Pressure  : 289 kPa       Temperature: 23 C         maybe_battery: 14         mic       : CHECKSUM
 """
-home_directory = os.path.expanduser( '~' )
 
 MODEL='Citroen'
 
@@ -141,7 +140,7 @@ def main():
 
   print(( 'manchester = %s' % str(manchester).replace('\xff','1').replace('\x00','_') ))
     
-  f = open(os.path.join( home_directory, 'TPMS', 'Output', output_file),'wb')
+  f = open(os.path.join( 'Output', output_file),'wb')
   f.write(manchester) 
 
   print(('signal written to %s' % output_file))

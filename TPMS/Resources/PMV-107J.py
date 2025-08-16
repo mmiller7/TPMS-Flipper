@@ -2,8 +2,6 @@ import time
 import crcmod
 import os
 
-home_directory = os.path.expanduser( '~' )
-
 def differential_manchester_encode(s):
         last_bit = 0
         state = 0
@@ -64,7 +62,7 @@ def main():
 
     bitstream = '00000000000000001111110' + differential_manchester_encode('1'+payload+crc_bits+'1') + '000000'
     
-    f = open(os.path.join( home_directory, 'TPMS', 'Output', 'test.txt'),"w")
+    f = open(os.path.join( 'Output', 'test.txt'),"w")
     f.write("[_ (8000us) ]\n[0 (-40kHz 100us) ]\n[1 (40kHz 100us) ]\n\n\n_ _ _\n%s" % bitstream) 
             
     print('bitstream = %s' % bitstream)

@@ -1,8 +1,6 @@
 import time
 import os
 
-home_directory = os.path.expanduser( '~' )
-
 MODEL='Schrader'
 
 PREAMBLE=int('F5555555E',16)
@@ -36,7 +34,7 @@ def main():
     print('Finished = %s' % finished)
     
     
-    f = open(os.path.join( home_directory, 'TPMS', 'Output', 'smd3ma4.txt'),"w")
+    f = open(os.path.join( 'Output', 'smd3ma4.txt'),"w")
     f.write("[_ (8000us) ]\n[0 (120us) ]\n[1 (40kHz 120us) ]\n\n\n_ _ _\n%s\n_ _ _" % finished) 
   
 if __name__ == '__main__':
